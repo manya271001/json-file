@@ -3,15 +3,14 @@ async function run(){
     let response = await data.json(); // json by default stores data in string  formate and this .json convert string data type into object data type
     console.log(data)
     console.log(response)
-    let selecteddata = document.querySelector("#tabledata")
+    let selecteddata = document.querySelector("#output")
     selecteddata.innerHTML=response.map((item)=>`
-         <tr>
-            <td>${item.id}</td>
-            <td><img src="${item.imgurl}" width="100px" height="100px"></td>
-            <td>${item.name}</td>
-            <td>${item.price}</td>
-            <td>${item.bname}</td>
-
-        </tr>
+          
+        <div id="card">
+        <div><img src="${item.imgurl}" alt="" height="200px" width="200px"></div>
+        <div><h4>${item.name}</h4></div>
+        <div><h4>${item.bname}</h4></div>
+        <div><h4>${item.price}</h4></div>
+        </div>
     `).join(" ")
 }
