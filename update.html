@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+        <style>
+        #upform{
+            position: absolute;
+            top: 200px;
+            left: 500px;
+            background-color: rgb(212, 110, 73);
+            padding: 20px;
+            display: none;
+        }
+    </style>
+
 </head>
 <body onload="run()">
-    <table id="tabledata" border="2px" cellspacing="2px" cellpadding="2px" align="center">
+    <table id="tabledata" border="2px" cellspacing="2px" cellpadding="2px" align="center"></table>
+    <form action="" id="upform">
+        <input type="text" placeholder="enter img url" id="imgurl"> <br>
+        <input type="text" placeholder="enter name" id="name"> <br>
+        <input type="text" placeholder="enter Brand name" id="bname"> <br>
+        <input type="text" placeholder="enter price" id="price"> <br> 
+        <button onclick="finalupdate()">UPDATE</button>
         
-       
-    </table>
+    </form>
+
+    
     <script src="./update.js"></script>
 </body>
 </html>
